@@ -58,7 +58,7 @@ def create_databaseANDTable():
             # 使用数据库
             cursor.execute("USE condaControlor")
             
-            # 创建环境表（修复了语法错误，移除了多余的逗号）
+            # 创建环境表
             create_env_table = """CREATE TABLE IF NOT EXISTS environments (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 env_name VARCHAR(255) UNIQUE NOT NULL,
@@ -160,8 +160,7 @@ class MySQLController:
                 # 判断表是否为空
                 cursor.execute("SELECT * FROM environments")
                 if cursor.fetchone() is not None:
-                    # 清空数据表内现有的数据，先删母表，子表外键会让它一起被删除
-                    #cursor.execute("DELETE FROM packages")
+                    # 清空数据表内现有的数据，直接删母表，子表的外键连接会让它一起被删除
                     cursor.execute("DELETE FROM environments")                   
                 
                 # 重新插入环境数据

@@ -56,11 +56,11 @@ pip install PySide6 pymysql
 - **Password**: `123456`
 - **Database**: `condaControlor`
 
-请确保 MySQL 中存在该用户并拥有建库权限，或修改 `mysqlcontroller.py` 和 `main.py` 中的连接参数。
-也就是需要创建一个新的SQL用户，	   用户名：chiruno，密码：123456
-`什么？为什么是 chiruno？ 你怎么睡傻了，咱马上去找大酱来给你看看（误）`
-不知道怎么创建的话，运行 MySQL 8.0 Command Line Client - Unicode，输入 root 用户的密码（大概率也是 123456），然后使用：
-				   CREATE USER 'chiruno'@'localhost' IDENTIFIED BY '123456';
+请确保 MySQL 中存在该用户并拥有建库权限，或修改 `mysqlcontroller.py` 和 `main.py` 中的连接参数。   
+也就是需要创建一个新的SQL用户，	   用户名：chiruno，密码：123456   
+`什么？为什么是 chiruno？ 你怎么睡傻了，咱马上去找大酱来给你看看（误）`   
+不知道怎么创建的话，运行 MySQL 8.0 Command Line Client - Unicode，输入 root 用户的密码（大概率也是 123456），然后使用：   
+```CREATE USER 'chiruno'@'localhost' IDENTIFIED BY '123456';```
 
 ### 3. 运行程序
 
