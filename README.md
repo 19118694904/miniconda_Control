@@ -125,7 +125,7 @@ Conda 路径会被保存在本地文档，以免去每次都要手动选择：
 - 程序依赖 `conda.exe`，路径为 `<conda_path>/Scripts/conda.exe`（Windows）
 - 若 Conda 环境路径包含空格或特殊字符，可能影响部分命令解析
 - 所有操作功能均使用 `conda.exe`，如 `conda remove -nenv_name package -y`
-- 搜索功能区分大小写，且仅在当前选中环境的包列表中查找
+- 搜索功能区仅在当前选中环境的包列表中查找
 
 ---
 

@@ -67,7 +67,7 @@ class CondaEnvManager:
         """
 
         # 判断传入的是环境名称还是路径（偶尔有只能获得路径而没有名字的环境，如vscode创建的）
-        if any(char in env_name for char in [':', '/', '\\', ' ', '#']):
+        if any(char in env_name for char in [':', '/', '\\', '#']):
             # 包含不允许的字符，应该是路径
             command = [os.path.join(self.conda_path, "Scripts", "conda.exe"), "list", "-p", env_name]
         else:

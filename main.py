@@ -252,7 +252,7 @@ class CondaEnvManagerGUI(QMainWindow):
                 f.write(self.conda_path)
 
         # 创建运行对话框
-        self.show_running_dialog("获取环境信息")
+        self.show_running_dialog("获取环境信息中，可能耗时较长，请不要关闭窗口")
 
         # 是否要从数据库中读取数据
         if self.read_DataBase:
@@ -279,7 +279,6 @@ class CondaEnvManagerGUI(QMainWindow):
 
         # 如果对话框还存在（运行），则关闭运行对话框，并弹出提示
         self.close_running_dialog()
-        #QMessageBox.information(self, "提示", "数据导入成功")
 
         return True
 
